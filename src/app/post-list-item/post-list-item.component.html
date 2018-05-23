@@ -1,0 +1,24 @@
+  <li [ngClass]="
+    {'list-group-item': true,
+      'list-group-item-success': loveIts > hateIts,
+      'list-group-item-danger': loveIts < hateIts
+    }">
+    <h2 data-toggle="collapse">{{ title }}</h2>
+    <hr>
+    <p>{{ content }}</p>
+
+    <!-- ######## LOVE BUTTON ######### -->
+    <button class="btn btn-success" (click)="onLike()">
+      <i class="glyphicon glyphicon-thumbs-up" style="vertical-align: middle;"></i>
+      <span> {{ loveIts }}</span>
+    </button>
+
+    <!-- ######## HATE BUTTON ######### -->
+    <button class="btn btn-danger" (click)="onDisLike()">
+      <i class="glyphicon glyphicon-thumbs-down" style="vertical-align: middle;"></i>
+      <span> {{ hateIts }}</span>
+    </button>
+
+    <!-- ######## POST DATE ######### -->
+    <span class="glyphicon glyphicon-pencil navbar-text pull-right"> {{ created_at | date: 'd/MM/y' }} </span>
+  </li>
