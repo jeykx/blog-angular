@@ -10,7 +10,7 @@ export class PostListItemComponent implements OnInit {
   @Input() title: string;
   @Input() content: string;
   @Input() loveIts: number;
-  @Input() hateIts: number;
+  @Input() dislikeIts: number;
   @Input() created_at: Date;
 
   
@@ -19,7 +19,7 @@ export class PostListItemComponent implements OnInit {
   }
 
   onDisLike() {
-    this.hateIts++;
+    this.dislikeIts++;
   }
 
   constructor() { 
