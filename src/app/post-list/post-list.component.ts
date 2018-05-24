@@ -12,7 +12,7 @@ export class PostListComponent implements OnInit {
       title: string,
       content: string,
       loveIts: number,
-      hateIts: number,
+      dislikeIts: number,
       created_at: Date
     };
    
